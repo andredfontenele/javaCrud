@@ -3,7 +3,7 @@ package br.com.agenda.model;
 import java.util.Date;
 
 
-public class Agenda {
+public class Contato {
 
 	private int id;
 	private String nome;
