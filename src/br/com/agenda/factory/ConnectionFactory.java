@@ -13,18 +13,21 @@ public class ConnectionFactory {
 	
 	//Conexão com o banco de dados
 	public static Connection createConnectionToMySQL() throws Exception{
-		Class.forName("com.mysql.jdbc.Driver");
 		
 		Connection connection = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
 		
 		return connection;
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		//Recuperar conexão com o bd
-		Connection conn = createConnectionToMySQL();
+		Connection con = createConnectionToMySQL();
 		
-		if
+		//Testar se a conexão é nula
+		if(con!=null) {
+			System.out.println("Conexão obtida com sucesso");
+			con.close();
+		}
 	}
 	
 }
